@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+  margin: auto;
+  margin-top: 10%;
+  font-size: 0;
+  padding: 0;
+  width: 300px;
+}
+
+.cell {
+  display: inline-block;
+  width: 90px;
+  height: 90px;
+  border: 5px solid black;
+  background-size: contain;
+}
+
+#top_left {
+  border-top: none;
+  border-left: none;
+}
+
+#top_mid {
+  border-top: none;
+}
+
+#top_right {
+  border-top: none;
+  border-right: none;
+}
+
+#left {
+  border-left: none;
+}
+
+#right {
+  border-right: none;
+}
+
+#bottom_left {
+  border-bottom: none;
+  border-left: none;
+}
+
+#bottom_mid {
+  border-bottom: none;
+}
+
+#bottom_right {
+  border-bottom: none;
+  border-right: none;
+}
+
+.x {
+  background-image: url("xMark.png");
+}
+
+.o {
+  background-image: url("circle.png");
+}
