@@ -8,6 +8,18 @@
 </head>
 
 <body>
+<div id="overlay">
+  <h1>Tic Tac Toe</h1>
+  <button type="button" name="button" onclick="showNameInputs()">PLAYER vs PLAYER</button>
+  <form id="namesForm" class="formInactive">
+    <p>Player 1 Name:</p>
+    <input id="p1_name" type="text" name="" value="">
+    <p>Player 2 Name:</p>
+    <input id="p2_name"type="text" name="" value="">
+    <button id="startPvP" type="button" name="button" onclick="createPlayers()">Go</button>
+  </form>
+  <button type="button" name="button">PLAYER vs AI</button>
+</div>
   <div class="container">
     <div class="cell" id="top_left"></div>
     <div class="cell" id="top_mid"></div>
@@ -19,6 +31,21 @@
     <div class="cell" id="bottom_mid"></div>
     <div class="cell" id="bottom_right"></div>
   </div>
+
+
+  <div id="announcer">
+    <p><span id="winner"></span></p>
+    <button type="button" name="button" onclick="game.newRound()">Next Round</button>
+  </div>
+    <div class="player" id="player1">
+      <p id="p1name"></p>
+      <p>Score: <span id="score1">0</span></p>
+    </div>
+    <div class="player" id="player2">
+      <p id="p2name"></p>
+      <p>Score: <span id="score2">0</span></p>
+    </div>
+
   <script type="text/javascript" src="script.js"> </script>
 </body>
 
