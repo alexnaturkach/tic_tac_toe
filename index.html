@@ -5,21 +5,31 @@
   <meta charset="utf-8">
   <title></title>
   <link rel="stylesheet" href="css.css">
+  <link rel="stylesheet" href="hamburgers.css">
+
 </head>
 
 <body>
-<div id="overlay">
-  <h1>Tic Tac Toe</h1>
-  <button type="button" name="button" onclick="showNameInputs()">PLAYER vs PLAYER</button>
-  <form id="namesForm" class="formInactive">
-    <p>Player 1 Name:</p>
-    <input id="p1_name" type="text" name="" value="">
-    <p>Player 2 Name:</p>
-    <input id="p2_name"type="text" name="" value="">
-    <button id="startPvP" type="button" name="button" onclick="createPlayers()">Go</button>
-  </form>
-  <button type="button" name="button">PLAYER vs AI</button>
-</div>
+  <button id="burger" class="hamburger hamburger--spin is-active" type="button" onclick="toggleOverlay()">
+    <span class="hamburger-box">
+      <span class="hamburger-inner"></span>
+    </span>
+  </button>
+  <div id="overlay">
+
+    <h1>Tic Tac Toe</h1>
+    <button type="button" name="button" onclick="showNameInputs()">Player vs Player</button>
+    <div id="namesForm" class="formInactive">
+      <p>Player 1 Name:</p>
+      <input id="p1_name" autocomplete="off">
+      <p>Player 2 Name:</p>
+      <input id="p2_name" autocomplete="off">
+      <button id="startPvP" type="button" name="button" onclick="createPlayers()">GO</button>
+    </div>
+    <button type="button" name="button" onclick="playVsAI()">Player vs AI</button>
+    <button type="button" name="button" onclick="game.newRound()">Reset Score</button>
+  </div>
+
   <div class="container">
     <div class="cell" id="top_left"></div>
     <div class="cell" id="top_mid"></div>
@@ -32,20 +42,32 @@
     <div class="cell" id="bottom_right"></div>
   </div>
 
+<div id='resetContainer'>
+  <button id='resetBoardButton'>Clear Board</button>
+</div>
 
   <div id="announcer">
     <p><span id="winner"></span></p>
-    <button type="button" name="button" onclick="game.newRound()">Next Round</button>
+    <button onclick="game.newRound()">Next Round</button>
   </div>
-    <div class="player" id="player1">
-      <p id="p1name"></p>
-      <p>Score: <span id="score1">0</span></p>
-    </div>
-    <div class="player" id="player2">
-      <p id="p2name"></p>
-      <p>Score: <span id="score2">0</span></p>
-    </div>
-
+  <div class="player" id="player1">
+    <p id="p1name"></p>
+    <p>Score: <span id="score1">0</span></p>
+  </div>
+  <div class="player" id="player2">
+    <p id="p2name"></p>
+    <p>Score: <span id="score2">0</span></p>
+  </div>
+  <script>
+    // Look for .hamburger
+    var hamburger = document.querySelector(".hamburger");
+    // On click
+    hamburger.addEventListener("click", function() {
+      // Toggle class "is-active"
+      hamburger.classList.toggle("is-active");
+      // Do something else, like open/close menu
+    });
+  </script>
   <script type="text/javascript" src="script.js"> </script>
 </body>
 
