@@ -26,7 +26,9 @@
       <input id="p2_name" autocomplete="off">
       <button id="startPvP" type="button" name="button" onclick="createPlayers()">GO</button>
     </div>
-    <button type="button" name="button" onclick="startPvsAI()">Player vs AI</button>
+    <button id = 'gameAI' type="button" name="button" onclick="showAiModes()">Player vs AI</button>
+    <button id = 'easyAI' type="button" name="button" onclick="startVsEasyAI()">Easy AI</button>
+    <button id = 'hardAI' type="button" name="button" onclick="startVsHardAI()">Unbeatable AI</button>
     <button type="button" name="button" onclick="game.newRound()">Reset Score</button>
   </div>
 

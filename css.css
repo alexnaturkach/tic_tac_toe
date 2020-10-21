@@ -107,6 +107,21 @@ h1 {
   margin: 0 0 5px 0;
 }
 
+#easyAI, #hardAI {
+  display: block;
+  width: 30%!important;
+  height: 0 !important;
+  opacity: 0;
+  transition: opacity 0.5s, height 1s, margin 1s, padding 1s;
+}
+
+#easyAI.active, #hardAI.active {
+  width: 30%!important;
+  height: 100px!important;
+  transition: opacity 0.5s, height 1s, margin 1s, padding 1s;
+  opacity: 1;
+}
+
 input {
   background-color: #e751a0;
   color: #6ae6e9;
